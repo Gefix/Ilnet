@@ -1,0 +1,162 @@
+ Volume in drive D is Data
+ Volume Serial Number is 2EBB-C412
+
+ Directory of D:\git\Ilnet\Clients\WindowsClient
+
+16.09.2012 £.  22:08            28ÿ573 GraphDoc.cs
+23.04.2012 £.  08:40            22ÿ480 GraphDoc.designer.cs
+31.07.2016 £.  05:08            26ÿ773 MainForm.cs
+22.04.2012 £.  11:09            21ÿ682 MainForm.Designer.cs
+21.04.2012 £.  13:34               515 Program.cs
+21.04.2012 £.  13:34               410 PropertyGridInterface.cs
+21.04.2012 £.  13:34               659 PropertyWindow.cs
+21.04.2012 £.  13:34             3ÿ263 PropertyWindow.designer.cs
+23.04.2012 £.  11:48             5ÿ628 RepositoryExplorer.cs
+23.04.2012 £.  11:48            10ÿ294 RepositoryExplorer.designer.cs
+21.04.2012 £.  13:44             1ÿ478 ServerStatusDoc.cs
+21.04.2012 £.  13:34             6ÿ602 ServerStatusDoc.designer.cs
+21.04.2012 £.  13:34               666 Toolbox.cs
+23.04.2012 £.  06:06             3ÿ436 Toolbox.designer.cs
+21.04.2012 £.  13:35               256 ToolstripInterface.cs
+21.04.2012 £.  13:35               399 ToolWindow.cs
+21.04.2012 £.  13:35             4ÿ156 ToolWindow.Designer.cs
+21.04.2012 £.  13:35               261 WindowDelegates.cs
+              18 File(s)        137ÿ531 bytes
+
+ Directory of D:\git\Ilnet\Clients\WindowsClient\bin\Release
+
+01.12.2014 £.  18:14                27 debug.cs
+               1 File(s)             27 bytes
+
+ Directory of D:\git\Ilnet\Clients\WindowsClient\obj\Release
+
+31.07.2016 £.  04:38                 0 TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+31.07.2016 £.  04:38                 0 TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+31.07.2016 £.  04:38                 0 TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+               3 File(s)              0 bytes
+
+ Directory of D:\git\Ilnet\Clients\WindowsClient\Properties
+
+21.04.2012 £.  14:23             1ÿ448 AssemblyInfo.cs
+31.07.2016 £.  04:38             7ÿ433 Resources.Designer.cs
+31.07.2016 £.  04:38             2ÿ318 Settings.Designer.cs
+               3 File(s)         11ÿ199 bytes
+
+ Directory of D:\git\Ilnet\Libraries\CompilerLibrary
+
+22.04.2012 £.  00:38             6ÿ270 ProjectCompiler.cs
+               1 File(s)          6ÿ270 bytes
+
+ Directory of D:\git\Ilnet\Libraries\CompilerLibrary\Properties
+
+21.04.2012 £.  16:36             1ÿ438 AssemblyInfo.cs
+               1 File(s)          1ÿ438 bytes
+
+ Directory of D:\git\Ilnet\Libraries\EditorLibrary
+
+21.04.2012 £.  13:44            17ÿ616 GConnection.cs
+21.04.2012 £.  13:44               481 GEF.cs
+21.04.2012 £.  13:44             9ÿ918 GElement.cs
+21.04.2012 £.  13:44             2ÿ401 GNode.cs
+21.04.2012 £.  13:44             2ÿ656 GNodeFunction.cs
+21.04.2012 £.  13:44             1ÿ159 GNodeStub.cs
+21.04.2012 £.  13:44             9ÿ536 GNodeSubprocess.cs
+21.04.2012 £.  13:44             2ÿ167 GNodeVariable.cs
+30.04.2012 £.  14:22            16ÿ677 GProcess.cs
+21.04.2012 £.  13:44             2ÿ767 GProject.cs
+21.04.2012 £.  13:44             6ÿ112 GraphicUtils.cs
+              11 File(s)         71ÿ490 bytes
+
+ Directory of D:\git\Ilnet\Libraries\EditorLibrary\Properties
+
+21.04.2012 £.  14:23             1ÿ434 AssemblyInfo.cs
+               1 File(s)          1ÿ434 bytes
+
+ Directory of D:\git\Ilnet\Libraries\ServerLibrary
+
+11.05.2015 £.  12:27            28ÿ659 ILNETServer.cs
+               1 File(s)         28ÿ659 bytes
+
+ Directory of D:\git\Ilnet\Libraries\ServerLibrary\Properties
+
+21.04.2012 £.  15:10             1ÿ443 AssemblyInfo.cs
+19.04.2012 £.  17:59             1ÿ487 Settings.Designer.cs
+               2 File(s)          2ÿ930 bytes
+
+ Directory of D:\git\Ilnet\Libraries\ShellLibrary
+
+24.04.2012 £.  04:48             6ÿ630 iliClass.cs
+21.04.2012 £.  21:35             3ÿ422 Utils.cs
+               2 File(s)         10ÿ052 bytes
+
+ Directory of D:\git\Ilnet\Libraries\ShellLibrary\Properties
+
+20.04.2012 £.  03:11             1ÿ428 AssemblyInfo.cs
+               1 File(s)          1ÿ428 bytes
+
+ Directory of D:\git\Ilnet\Model\ILNET\Elements
+
+22.04.2012 £.  00:24               904 Element.cs
+22.04.2012 £.  00:23             2ÿ430 MetaData.cs
+20.04.2012 £.  02:11            10ÿ625 Node.cs
+22.04.2012 £.  00:29             8ÿ475 Process.cs
+22.04.2012 £.  00:29             1ÿ787 ProcessParameter.cs
+21.04.2012 £.  21:35             3ÿ405 Project.cs
+01.12.2014 £.  18:03            11ÿ032 Shell.cs
+22.04.2012 £.  00:29             3ÿ699 Variable.cs
+               8 File(s)         42ÿ357 bytes
+
+ Directory of D:\git\Ilnet\Model\ILNET\Properties
+
+03.08.2010 £.  13:40             1ÿ422 AssemblyInfo.cs
+               1 File(s)          1ÿ422 bytes
+
+ Directory of D:\git\Ilnet\Servers\ConsoleServer
+
+21.04.2012 £.  15:10               882 Server.cs
+               1 File(s)            882 bytes
+
+ Directory of D:\git\Ilnet\Servers\ConsoleServer\Properties
+
+03.08.2010 £.  13:40             1ÿ264 AssemblyInfo.cs
+               1 File(s)          1ÿ264 bytes
+
+ Directory of D:\git\Ilnet\Servers\WebService
+
+01.12.2014 £.  18:12             8ÿ099 ILNET.asmx.cs
+               1 File(s)          8ÿ099 bytes
+
+ Directory of D:\git\Ilnet\Servers\WebService\Backup
+
+14.03.2013 £.  11:36             8ÿ243 ILNET.asmx.cs
+               1 File(s)          8ÿ243 bytes
+
+ Directory of D:\git\Ilnet\Servers\WebService\Backup\Properties
+
+03.08.2010 £.  13:40             1ÿ409 AssemblyInfo.cs
+21.04.2012 £.  13:57             1ÿ104 Settings.Designer.cs
+               2 File(s)          2ÿ513 bytes
+
+ Directory of D:\git\Ilnet\Servers\WebService\Properties
+
+03.08.2010 £.  13:40             1ÿ409 AssemblyInfo.cs
+01.12.2014 £.  17:14             1ÿ106 Settings.Designer.cs
+               2 File(s)          2ÿ515 bytes
+
+ Directory of D:\git\Ilnet\Servers\WindowsService
+
+21.04.2012 £.  15:10             1ÿ342 ILNETService.cs
+21.04.2012 £.  13:59             1ÿ123 ILNETService.Designer.cs
+21.04.2012 £.  13:58               536 Program.cs
+21.04.2012 £.  14:00               404 ProjectInstaller.cs
+21.04.2012 £.  14:00             2ÿ113 ProjectInstaller.Designer.cs
+               5 File(s)          5ÿ518 bytes
+
+ Directory of D:\git\Ilnet\Servers\WindowsService\Properties
+
+03.08.2010 £.  13:40             1ÿ458 AssemblyInfo.cs
+               1 File(s)          1ÿ458 bytes
+
+     Total Files Listed:
+              68 File(s)        346ÿ729 bytes
+               0 Dir(s)  578ÿ681ÿ036ÿ800 bytes free

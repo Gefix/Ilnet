@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="ILNET.asmx.cs" Class="ILNET.Server.WebService.WebService" %>

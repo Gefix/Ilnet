@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-16"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MoodleCourseTest" entryClass="main">
+  <class name="main" entryNode="init" exitNode="">
+    <node name="init" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-258" />
+      <meta name="posY" value="-211" />
+      <meta name="anchors,register,," value="-243,-211,0,0,20;-174,-146,0,20,0" />
+      <meta name="connections" value="register,," />
+      <function />
+      <nextNode>register</nextNode>
+    </node>
+    <node name="register" nodeIsClass="true" subClass="registerCourse">
+      <meta name="posX" value="-106" />
+      <meta name="posY" value="-132" />
+      <meta name="anchors,listen,," value="-37,-146,0,0,20;-2,-146,0,20,0" />
+      <meta name="anchors,listen,coursePID,coursePID" value="-37,-118,0,0,20;-2,-118,0,20,0" />
+      <meta name="connections" value="listen,,;listen,coursePID,coursePID" />
+      <function />
+      <nextNode>listen</nextNode>
+      <classParam name="courseID">
+        <value>$courseID</value>
+      </classParam>
+    </node>
+    <node name="listen" nodeIsClass="true" subClass="registerHook">
+      <meta name="posX" value="68" />
+      <meta name="posY" value="-119" />
+      <meta name="anchors,studentID,studentID," value="138,-118,0,0,20;238,-204,0,20,0" />
+      <meta name="anchors,SCPID,SCPID," value="138,-91,0.7372,0,117.516;-237,15,0.5679,193.352,0" />
+      <meta name="anchors,start,," value="138,-146,0.5935,0,355.8455;-151,5,0.6398,160.8011,0" />
+      <meta name="connections" value="studentID,studentID,;SCPID,SCPID,;start,," />
+      <function>$studentID = $listen["studentID"];
+$SCPID = $listen["SCPID"];
+</function>
+      <nextNode>start</nextNode>
+      <classParam name="coursePID">
+        <value>$register["coursePID"]</value>
+      </classParam>
+    </node>
+    <node name="c1" nodeIsClass="true" subClass="activity">
+      <meta name="posX" value="94" />
+      <meta name="posY" value="69" />
+      <meta name="anchors,c3,SCPID,SCPID" value="160,68,0,0,20;261,62,0,20,0" />
+      <meta name="anchors,c3,," value="160,41,0,0,20;261,35,0,20,0" />
+      <meta name="connections" value="c3,SCPID,SCPID;c3,," />
+      <function />
+      <nextNode>c3</nextNode>
+      <classParam name="SCPID">
+        <value>$SCPID</value>
+      </classParam>
+      <classParam name="ResourceID">
+        <value>$testpageID</value>
+      </classParam>
+    </node>
+    <node name="start" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-136" />
+      <meta name="posY" value="5" />
+      <meta name="anchors,c1,," value="-121,5,0,0,20;27,41,0,20,0" />
+      <meta name="anchors,c2,," value="-121,5,0,0,20;-156,153,0,20,0" />
+      <meta name="connections" value="c1,,;c2,," />
+      <function />
+      <nextNode>c1</nextNode>
+      <nextNode>c2</nextNode>
+    </node>
+    <node name="c2" nodeIsClass="true" subClass="activity">
+      <meta name="posX" value="-90" />
+      <meta name="posY" value="181" />
+      <meta name="connections" value="" />
+      <function />
+      <classParam name="SCPID">
+        <value>$SCPID</value>
+      </classParam>
+      <classParam name="ResourceID">
+        <value>$testQuizID</value>
+      </classParam>
+    </node>
+    <node name="c3" nodeIsClass="true" subClass="activity">
+      <meta name="posX" value="328" />
+      <meta name="posY" value="63" />
+      <meta name="connections" value="" />
+      <function />
+      <classParam name="ResourceID">
+        <value>$sdfsdfsdID</value>
+      </classParam>
+      <classParam name="SCPID">
+        <value>$c1["SCPID"]</value>
+      </classParam>
+    </node>
+    <var name="courseID" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-238" />
+      <meta name="posY" value="-90" />
+      <meta name="anchors,register,,courseID" value="-223,-90,0,0,20;-174,-118,0,20,0" />
+      <meta name="connections" value="register,,courseID" />
+      <type>int</type>
+      <value>2</value>
+    </var>
+    <var name="studentID" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="253" />
+      <meta name="posY" value="-204" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+    <var name="SCPID" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-222" />
+      <meta name="posY" value="15" />
+      <meta name="anchors,c1,,SCPID" value="-207,15,0,0,20;27,68,0,20,0" />
+      <meta name="anchors,c2,,SCPID" value="-207,15,0,0,20;-156,180,0,20,0" />
+      <meta name="connections" value="c1,,SCPID;c2,,SCPID" />
+      <type>int</type>
+      <value />
+    </var>
+    <var name="testpageID" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-17" />
+      <meta name="posY" value="109" />
+      <meta name="anchors,c1,,ResourceID" value="-2,109,0,0,20;27,95,0,20,0" />
+      <meta name="connections" value="c1,,ResourceID" />
+      <type>int</type>
+      <value>3</value>
+    </var>
+    <var name="sdfsdfsdID" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="206" />
+      <meta name="posY" value="115" />
+      <meta name="anchors,c3,,ResourceID" value="221,115,0,0,20;261,89,0,20,0" />
+      <meta name="connections" value="c3,,ResourceID" />
+      <type>int</type>
+      <value>2</value>
+    </var>
+    <var name="testQuizID" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-201" />
+      <meta name="posY" value="209" />
+      <meta name="anchors,c2,,ResourceID" value="-186,209,0,0,20;-156,207,0,20,0" />
+      <meta name="connections" value="c2,,ResourceID" />
+      <type>int</type>
+      <value>5</value>
+    </var>
+  </class>
+  <class name="registerCourse" entryNode="request" exitNode="process">
+    <node name="request" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-258" />
+      <meta name="posY" value="-39" />
+      <meta name="anchors,process,," value="-243,-39,0,0,20;-186,-39,0,20,0" />
+      <meta name="connections" value="process,," />
+      <function>$msg["moodleEventType"] = "COURSE_INIT";
+$msg["courseID"] = $courseID;
+raiseEvent($msg);
+</function>
+      <nextNode>process</nextNode>
+    </node>
+    <node name="process" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-171" />
+      <meta name="posY" value="-39" />
+      <meta name="connections" value="" />
+      <function>$coursePID = $request["coursePID"];
+</function>
+    </node>
+    <var name="courseID" level="Local" isInput="true" isOutput="false">
+      <meta name="posX" value="-274" />
+      <meta name="posY" value="-169" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+    <var name="msg" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-274" />
+      <meta name="posY" value="-107" />
+      <meta name="connections" value="" />
+      <type>Hashtable</type>
+      <value />
+    </var>
+    <var name="coursePID" level="Local" isInput="false" isOutput="true">
+      <meta name="posX" value="-166" />
+      <meta name="posY" value="-171" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+  </class>
+  <class name="registerHook" entryNode="listener" exitNode="process">
+    <node name="listener" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-127" />
+      <meta name="posY" value="24" />
+      <meta name="anchors,process,," value="-112,24,0,0,20;-47,24,0,20,0" />
+      <meta name="connections" value="process,," />
+      <function>$msg["moodleEventTypeInternal"] = "STUDENT_INIT";
+$msg["coursePID"] = $coursePID;
+listenEvent($msg);
+</function>
+      <nextNode>process</nextNode>
+    </node>
+    <node name="process" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-32" />
+      <meta name="posY" value="24" />
+      <meta name="anchors,answer,," value="-17,24,0,0,20;48,-36,0,20,0" />
+      <meta name="connections" value="answer,," />
+      <function>$studentID = $listener["studentID"];
+$SCPID = $listener["SCPID"];
+$eventID = $listener["systemEventId"];
+</function>
+      <nextNode>answer</nextNode>
+    </node>
+    <node name="answer" nodeIsClass="false" subClass="">
+      <meta name="posX" value="63" />
+      <meta name="posY" value="-36" />
+      <meta name="anchors,close,," value="78,-36,0,0,20;121,-36,0,20,0" />
+      <meta name="connections" value="close,," />
+      <function>$msg.Clear();
+$msg["systemEventId"] = $eventID;
+$msg["SCPID"] = $SCPID;
+answerEvent($msg);
+</function>
+      <nextNode>close</nextNode>
+    </node>
+    <node name="close" nodeIsClass="false" subClass="">
+      <meta name="posX" value="136" />
+      <meta name="posY" value="-36" />
+      <meta name="connections" value="" />
+      <function>closeEvent($msg);
+</function>
+    </node>
+    <var name="coursePID" level="Local" isInput="true" isOutput="false">
+      <meta name="posX" value="-127" />
+      <meta name="posY" value="-113" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+    <var name="studentID" level="Local" isInput="false" isOutput="true">
+      <meta name="posX" value="-43" />
+      <meta name="posY" value="-114" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+    <var name="SCPID" level="Local" isInput="false" isOutput="true">
+      <meta name="posX" value="34" />
+      <meta name="posY" value="-115" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+    <var name="msg" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-127" />
+      <meta name="posY" value="-48" />
+      <meta name="connections" value="" />
+      <type>Hashtable</type>
+      <value />
+    </var>
+    <var name="eventID" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-41" />
+      <meta name="posY" value="-51" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+  </class>
+  <class name="activity" entryNode="raiseEvent" exitNode="processAnswer">
+    <node name="raiseEvent" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-107" />
+      <meta name="posY" value="11" />
+      <meta name="anchors,processAnswer,," value="-92,11,0,0,20;-18,11,0,20,0" />
+      <meta name="connections" value="processAnswer,," />
+      <function>$msg["moodleEventType"] = "ACTIVITY";
+$msg["resourceId"] = $ResourceID;
+$msg["studentCourseProcessId"] = $SCPID;
+raiseEvent($msg);
+</function>
+      <nextNode>processAnswer</nextNode>
+    </node>
+    <node name="processAnswer" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-3" />
+      <meta name="posY" value="11" />
+      <meta name="connections" value="" />
+      <function>$Result = $raiseEvent["Result"];
+</function>
+    </node>
+    <var name="msg" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-85" />
+      <meta name="posY" value="-62" />
+      <meta name="connections" value="" />
+      <type>Hashtable</type>
+      <value />
+    </var>
+    <var name="SCPID" level="Local" isInput="true" isOutput="true">
+      <meta name="posX" value="-87" />
+      <meta name="posY" value="-128" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+    <var name="Result" level="Local" isInput="false" isOutput="true">
+      <meta name="posX" value="-8" />
+      <meta name="posY" value="-130" />
+      <meta name="connections" value="" />
+      <type>double</type>
+      <value />
+    </var>
+    <var name="ResourceID" level="Local" isInput="true" isOutput="false">
+      <meta name="posX" value="-86" />
+      <meta name="posY" value="-191" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+  </class>
+</grammar>

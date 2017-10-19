@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-16"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Blocks" entryClass="AND_Join_Example">
+  <class name="AND_Join_Example" entryNode="start" exitNode="D">
+    <node name="start" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-187" />
+      <meta name="posY" value="-118" />
+      <meta name="anchors,X,," value="-172,-118,0,0,20;-92,-70,0,20,0" />
+      <meta name="anchors,A,," value="-172,-118,0,0,20;-35,-157,0,20,0" />
+      <meta name="anchors,f1,," value="-172,-118,0,0,20;-135,15,0,20,0" />
+      <meta name="connections" value="X,,;A,,;f1,," />
+      <function>log("start");</function>
+      <nextNode>A</nextNode>
+      <nextNode>X</nextNode>
+      <nextNode>f1</nextNode>
+    </node>
+    <node name="C" nodeIsClass="true" subClass="AND_Join">
+      <meta name="posX" value="159" />
+      <meta name="posY" value="-133" />
+      <meta name="anchors,D,," value="207,-133,0,0,20;235,-133,0,20,0" />
+      <meta name="connections" value="D,," />
+      <function />
+      <nextNode>D</nextNode>
+    </node>
+    <node name="A" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-20" />
+      <meta name="posY" value="-157" />
+      <meta name="anchors,C,," value="-5,-157,0,0,20;110,-133,0,20,0" />
+      <meta name="connections" value="C,," />
+      <function>log("A");</function>
+      <nextNode>C</nextNode>
+    </node>
+    <node name="D" nodeIsClass="false" subClass="">
+      <meta name="posX" value="250" />
+      <meta name="posY" value="-133" />
+      <meta name="connections" value="" />
+      <function>log("D");</function>
+    </node>
+    <node name="B" nodeIsClass="false" subClass="">
+      <meta name="posX" value="231" />
+      <meta name="posY" value="-41" />
+      <meta name="anchors,C,," value="246,-41,-0.6731,0,94.6414;110,-133,-0.7266,84.2912,0" />
+      <meta name="connections" value="C,," />
+      <function>log("B");</function>
+      <nextNode>C</nextNode>
+    </node>
+    <node name="X" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-77" />
+      <meta name="posY" value="-70" />
+      <meta name="anchors,Y,," value="-62,-70,0,0,20;-45,-70,0,20,0" />
+      <meta name="connections" value="Y,," />
+      <function />
+      <nextNode>Y</nextNode>
+    </node>
+    <node name="Y" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-30" />
+      <meta name="posY" value="-70" />
+      <meta name="anchors,Z,," value="-15,-70,0,0,20;4,-70,0,20,0" />
+      <meta name="connections" value="Z,," />
+      <function>$msg["systemEventType"] = "WebAction";
+$msg["q_Action"] = "DataRequest";
+$msg["a_Keywords"] = "";
+raiseEvent($msg);
+</function>
+      <nextNode>Z</nextNode>
+    </node>
+    <node name="Z" nodeIsClass="false" subClass="">
+      <meta name="posX" value="19" />
+      <meta name="posY" value="-70" />
+      <meta name="anchors,F,," value="34,-70,0,0,20;34,18,0,20,0" />
+      <meta name="connections" value="F,," />
+      <function>$msg.Clear();
+$msg["systemEventType"] = "WebAction";
+$msg["q_Action"] = "Info";
+$msg["q_Status"] = "Complete";
+$msg["q_Keywords"] = $Y["Keywords"];
+raiseEvent($msg);
+</function>
+      <nextNode>F</nextNode>
+    </node>
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-120" />
+      <meta name="posY" value="15" />
+      <meta name="anchors,f2,," value="-105,15,0,0,20;-63,49,0,20,0" />
+      <meta name="connections" value="f2,," />
+      <function>$msg["systemEventType"] = "WebAction";
+$msg["q_Action"] = "Kolko e 2 + 2";
+$msg["a_Answer"] = "";
+raiseEvent($msg);
+</function>
+      <nextNode>f2</nextNode>
+    </node>
+    <node name="f2" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-48" />
+      <meta name="posY" value="49" />
+      <meta name="anchors,F,," value="-33,49,0,0,20;34,18,0,20,0" />
+      <meta name="connections" value="F,," />
+      <function>log($f1["Answer"]);
+if ((string)$f1["Answer"]!="4") return;</function>
+      <nextNode>F</nextNode>
+    </node>
+    <node name="F" nodeIsClass="true" subClass="AND_Join">
+      <meta name="posX" value="83" />
+      <meta name="posY" value="19" />
+      <meta name="anchors,f3,," value="131,18,0,0,20;158,-15,0,20,0" />
+      <meta name="connections" value="f3,," />
+      <function />
+      <nextNode>f3</nextNode>
+    </node>
+    <node name="f3" nodeIsClass="false" subClass="">
+      <meta name="posX" value="173" />
+      <meta name="posY" value="-15" />
+      <meta name="anchors,B,," value="188,-15,0,0,20;216,-41,0,20,0" />
+      <meta name="connections" value="B,," />
+      <function>$msg.Clear();
+$msg["systemEventType"] = "WebAction";
+$msg["q_Action"] = "Info";
+$msg["q_Status"] = "Process Complete";
+raiseEvent($msg);
+</function>
+      <nextNode>B</nextNode>
+    </node>
+    <var name="msg" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-41" />
+      <meta name="posY" value="-16" />
+      <meta name="connections" value="" />
+      <type>Hashtable</type>
+      <value />
+    </var>
+  </class>
+  <class name="AND_Split" entryNode="f1" exitNode="">
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <function />
+    </node>
+  </class>
+  <class name="AND_Join" entryNode="gateway" exitNode="gateway">
+    <node name="gateway" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-164" />
+      <meta name="posY" value="-260" />
+      <meta name="connections" value="" />
+      <function>string from = parent().previous();
+if (from==null) return;
+
+if (!$instances.ContainsKey(caller()))
+{
+    $instances.Add(caller(), new Dictionary&lt;int,int&gt;());
+}
+if (!parent().i.ContainsKey("process_id"))
+{
+    lock($instances)
+    {
+        parent().i.Add("process_id",$nextid);
+        $nextid = $nextid + 1;
+    }
+}
+$pid = (int)parent().i["process_id"];
+if (!$instances[caller()].ContainsKey($pid))
+{
+    $instances[caller()].Add($pid,$nextid);
+    $inputs_count.Add($nextid, parent().IncomingTransitions[caller()].Count);
+    $routes.Add($nextid, new Dictionary&lt;string, bool&gt;());
+    $nextid = $nextid + 1;
+}
+$id = $instances[caller()][$pid];
+
+if (!$routes[$id].ContainsKey(from))
+{
+    $routes[$id].Add(from,true);
+}
+
+log("Join: "+caller()+" : "+from+" "+$routes[$id].Count+" of "+ $inputs_count[$id]);
+
+if ($routes[$id].Count &lt; $inputs_count[$id]) return;
+
+lock($instances)
+{
+    $instances[caller()].Remove($pid);
+    $inputs_count.Remove($id);
+    $routes.Remove($id);
+}
+</function>
+    </node>
+    <var name="instances" level="Global" isInput="false" isOutput="false">
+      <meta name="posX" value="-245" />
+      <meta name="posY" value="-337" />
+      <meta name="connections" value="" />
+      <type>Dictionary&lt;string,Dictionary&lt;int,int&gt;&gt;</type>
+      <value />
+    </var>
+    <var name="id" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-163" />
+      <meta name="posY" value="-338" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value>0</value>
+    </var>
+    <var name="nextid" level="Global" isInput="false" isOutput="false">
+      <meta name="posX" value="-246" />
+      <meta name="posY" value="-403" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value>1</value>
+    </var>
+    <var name="routes" level="Global" isInput="false" isOutput="false">
+      <meta name="posX" value="-78" />
+      <meta name="posY" value="-338" />
+      <meta name="connections" value="" />
+      <type>Dictionary&lt;int,Dictionary&lt;string,bool&gt;&gt;</type>
+      <value />
+    </var>
+    <var name="inputs_count" level="Global" isInput="false" isOutput="false">
+      <meta name="posX" value="-78" />
+      <meta name="posY" value="-403" />
+      <meta name="connections" value="" />
+      <type>Dictionary&lt;int,int&gt;</type>
+      <value />
+    </var>
+    <var name="pid" level="Local" isInput="false" isOutput="false">
+      <meta name="posX" value="-166" />
+      <meta name="posY" value="-404" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value />
+    </var>
+  </class>
+  <class name="OR_Split" entryNode="f1" exitNode="">
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <function />
+    </node>
+  </class>
+  <class name="OR_Join" entryNode="f1" exitNode="">
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <function />
+    </node>
+  </class>
+  <class name="GUID" entryNode="f1" exitNode="">
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <function />
+    </node>
+  </class>
+  <class name="WebProject" entryNode="f1" exitNode="">
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <function>parent().i.Add("web_project_name",$Name);
+</function>
+    </node>
+    <var name="Name" level="Local" isInput="true" isOutput="false">
+      <meta name="posX" value="-2" />
+      <meta name="posY" value="-117" />
+      <meta name="connections" value="" />
+      <type>string</type>
+      <value />
+    </var>
+  </class>
+  <class name="WebController" entryNode="f1" exitNode="">
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="3" />
+      <meta name="posY" value="-18" />
+      <meta name="connections" value="" />
+      <function>parent().i.Add("web_controller_name",$Name);</function>
+    </node>
+    <var name="Name" level="Local" isInput="true" isOutput="false">
+      <meta name="posX" value="3" />
+      <meta name="posY" value="-116" />
+      <meta name="connections" value="" />
+      <type>string</type>
+      <value />
+    </var>
+  </class>
+  <class name="WebAction" entryNode="f1" exitNode="">
+    <node name="f1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <function />
+    </node>
+  </class>
+</grammar>

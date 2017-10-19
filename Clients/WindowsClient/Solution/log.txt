@@ -1,0 +1,12 @@
+start
+A
+Join: C : A 1 of 2
+4
+Join: F : f2 1 of 2
+Join: F : Z 2 of 2
+B
+Join: C : B 2 of 2
+D
+start
+A
+Join: C : A 1 of 2

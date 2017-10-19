@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-16"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ILWEB" entryClass="Class_1">
+  <class name="Class_1" entryNode="entry" exitNode="n1">
+    <node name="entry" nodeIsClass="false" subClass="">
+      <meta name="posX" value="-120" />
+      <meta name="posY" value="-99" />
+      <meta name="anchors,testSubClass,," value="-105,-99,0,0,20;32,-112,0,20,0" />
+      <meta name="connections" value="testSubClass,," />
+      <function>
+        $v1 = DateTime.Now.TimeOfDay.ToString();
+      </function>
+      <nextNode>testSubClass</nextNode>
+    </node>
+    <node name="testSubClass" nodeIsClass="true" subClass="Class_2">
+      <meta name="posX" value="75" />
+      <meta name="posY" value="-98" />
+      <meta name="anchors,n1,," value="117,-112,0,0,20;179,-97,0,20,0" />
+      <meta name="connections" value="n1,," />
+      <function />
+      <nextNode>n1</nextNode>
+    </node>
+    <node name="n1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="194" />
+      <meta name="posY" value="-97" />
+      <meta name="connections" value="" />
+      <function>$v2 = (int)$testSubClass["v1"];</function>
+    </node>
+    <var name="v1" level="Local" isInput="false" isOutput="true">
+      <meta name="posX" value="-63" />
+      <meta name="posY" value="116" />
+      <meta name="connections" value="" />
+      <type>string</type>
+      <value>""</value>
+    </var>
+    <var name="v2" level="Local" isInput="false" isOutput="true">
+      <meta name="posX" value="-139" />
+      <meta name="posY" value="21" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value>0</value>
+    </var>
+  </class>
+  <class name="Class_2" entryNode="n1" exitNode="n1">
+    <node name="n1" nodeIsClass="false" subClass="">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <function>$v1 = $v1 * $v1;</function>
+    </node>
+    <var name="v1" level="Local" isInput="true" isOutput="true">
+      <meta name="posX" value="0" />
+      <meta name="posY" value="0" />
+      <meta name="connections" value="" />
+      <type>int</type>
+      <value>0</value>
+    </var>
+  </class>
+</grammar>
